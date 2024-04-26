@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "sass:list";
+
+@use "variables" as v;
+@use "functions" as f;
+
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if map.has-key(v.$breakpoints, $bp) {
+    $width: map-get(v.$breakpoints, $bp);
+
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @if $is-retina {
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+}
+
+// .modal {
+//   width: 560px;
+//   height: 400px;
+//   padding: 16px;
+//   background-color: teal;
+
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// @mixin frame($width, $height: $width, $is-circle: false) {
+//   width: $width;
+//   height: $height;
+
+//   @if $is-circle {
+//     border-radius: 50%;
+//     overflow: hidden;
+//   }
+// }

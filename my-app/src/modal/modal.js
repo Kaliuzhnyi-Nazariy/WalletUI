@@ -31,10 +31,8 @@ export function ModalWindow() {
         .request({ method: "eth_accounts" })
         .then((res) => {
           if (res.length === 0) {
-            console.log("empty: ", res);
             return;
           }
-          console.log(res);
           changeHandlerWallet(res[0]);
         })
         .catch((err) => {
@@ -112,31 +110,47 @@ export function ModalWindow() {
   };
   return (
     <div>
-      <button onClick={openClick}>Open Modal</button>
+      <button onClick={openClick} className="open-model">
+        BUY TOKEN
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
+        className="modal"
       >
-        <h2>Hello</h2>
-        <p>
-          <b>Balance:</b> {balance}
+        <h2 className="title-modal">Buy a LTK!</h2>
+        <button className="close-btn" onClick={closeModal}>
+          close
+        </button>
+
+        <p className="text-modal">
+          Unlock a world of knowledge with Learn Token (LTK)! Access premium
+          content, earn rewards, fund scholarships, and invest in the future of
+          education. Buy it now! 🚀
         </p>
-        <button onClick={closeModal}>close</button>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <p>Wallet</p>
-          <input
-            {...register("toWalletAddress", {
-              required: "Address field is obvious!",
-            })}
-          />
-          <p>{errors.toWalletAddress?.message}</p>
-          <p>Amount</p>
-          <input
-            {...register("value", { required: "Value field is obvious!" })}
-          />
-          <p>{errors.toWalletAddress?.message}</p>
-          <input type="submit" />
+        <p className="amount-of-tokens-left">
+          <b className="amount-of-tokens-left-text">All available tokens:</b>
+          <span className="amount-of-tokens-left-value"> {balance}</span>
+        </p>
+        <form onSubmit={handleSubmit(onSubmit)} className="form-style">
+          <div className="wallet-inf">
+            <p>Your wallet:</p>
+            <input
+              {...register("toWalletAddress", {
+                required: "Address field is obvious!",
+              })}
+            />
+            <p>{errors.toWalletAddress?.message}</p>
+          </div>
+          <div className="amount-token">
+            <p>Amount</p>
+            <input
+              {...register("value", { required: "Value field is obvious!" })}
+            />
+            <p>{errors.toWalletAddress?.message}</p>
+            <input type="submit" className="btn-buy" />
+          </div>{" "}
         </form>
       </Modal>
     </div>

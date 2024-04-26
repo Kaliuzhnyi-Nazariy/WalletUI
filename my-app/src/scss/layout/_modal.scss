@@ -1,0 +1,76 @@
+@use "../utils/functions" as v;
+
+.modal {
+  width: 560px;
+  height: 400px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: v.get-color("white");
+  color: v.get-color("black");
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+
+  grid-template-areas:
+    ". t c"
+    "i i i"
+    "l l l"
+    "f f f"
+    "f f f"
+    "f f f";
+}
+
+.title-modal {
+  grid-area: t;
+}
+
+.close-btn {
+  display: grid;
+  grid-area: c;
+}
+
+.text-modal {
+  grid-area: i;
+}
+
+.amount-of-tokens-left {
+  grid-area: l;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "tl . ta";
+}
+
+.amount-of-tokens-left-text {
+  grid-area: tl;
+}
+
+.amount-of-tokens-left-value {
+  grid-area: ta;
+}
+
+.form-style {
+  display: grid;
+  grid-area: f;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "w w w"
+    "a a a";
+}
+
+.wallet-inf {
+  grid-area: w;
+}
+
+.amount-token {
+  grid-area: a;
+}
+
+.btn-buy {
+  grid-area: s;
+}

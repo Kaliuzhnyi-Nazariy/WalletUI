@@ -1,0 +1,33 @@
+$breakpoints: (
+  "mob": 375px,
+  "tab": 768px,
+  "pc": 1440px,
+);
+
+$colors: (
+  "primary": #8dd9bf,
+  "white": #fff,
+  "secondary": #28211e,
+  "black": #000,
+);
+
+$paddings: (
+  "lt": 8px,
+  "md": 16px,
+  "bg": 24px,
+);
+
+$main-font: "Work sans";
+
+$font-sizes: (
+  "xl": 72px,
+  "lg": 52px,
+  "md": 20px,
+  "sm": 16px,
+);
+
+$font-weights: (
+  "Thin": 400,
+  "Medium": 500,
+  "Bold": 700,
+);

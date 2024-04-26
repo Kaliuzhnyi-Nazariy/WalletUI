@@ -1,0 +1,17 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as f;
+@use "../utils/mixins" as mx;
+
+body {
+  @extend %main-text;
+
+  font-family: var.$main-font, sans-serif;
+  color: f.get-color("white");
+  background-color: f.get-color("primary");
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
