@@ -1,0 +1,59 @@
+// @use "variables" as v;
+
+/* TITLE TEXT */
+
+%logo-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0em;
+}
+
+%main-title {
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+%text-on-photo {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0em;
+}
+
+%second-title {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0em;
+}
+
+%main-text {
+  font-size: 20px;
+  font-weight: 500; // normal
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+%open-model {
+  font-size: 16px;
+  font-weight: 400; //regular
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+%title-modal {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+%text-modal {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: normal;
+}

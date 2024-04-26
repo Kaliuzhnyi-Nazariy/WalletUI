@@ -11,6 +11,8 @@
     "react-hook-form": "^7.51.3",
     "react-modal": "^3.16.1",
     "react-scripts": "^5.0.1",
+    "sass": "^1.75.0",
+    "the-new-css-reset": "^1.11.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
