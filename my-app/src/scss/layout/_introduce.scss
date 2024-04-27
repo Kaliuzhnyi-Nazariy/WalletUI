@@ -1,0 +1,13 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.logo-text {
+  @extend %logo-title;
+  color: fn.get-color("black");
+  text-align: center;
+
+  @include mx.mq(pc) {
+    text-align: none;
+  }
+}
