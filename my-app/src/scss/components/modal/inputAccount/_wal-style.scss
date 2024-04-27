@@ -1,0 +1,5 @@
+@use "../../../utils/placeholders";
+
+.wal-style {
+  @extend %cred-inf;
+}
