@@ -1,0 +1,29 @@
+// @use "btn" as b;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: $btn-min-width;
+  min-height: $btn-min-height;
+  padding: $btn-padding-y $btn-padding-x;
+
+  color: $btn-text-color;
+  background-color: $btn-text-bgcolor;
+
+  border: 1px solid transparent;
+  border-radius: $btn-border-radius;
+
+  // normilize
+
+  font: inherit;
+  text-transform: none;
+  margin: 0;
+  overflow: visible;
+  cursor: pointer;
+
+  font-size: $btn-text-size;
+  font-weight: $btn-text-weight;
+  line-height: calc($btn-line-height / $btn-text-size);
+  letter-spacing: #{calc($btn-text-spacing/$btn-text-size)}em;
+}

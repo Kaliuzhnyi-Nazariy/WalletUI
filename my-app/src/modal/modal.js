@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 import Modal from "react-modal";
 import Contract_ABI from "../Contracts/Contract_ABI.json";
 import Web3 from "web3";
@@ -110,7 +111,7 @@ export function ModalWindow() {
   };
   return (
     <div>
-      <button onClick={openClick} className="open-model">
+      <button onClick={openClick} className="btn open-modal">
         BUY TOKEN
       </button>
       <Modal
@@ -121,7 +122,7 @@ export function ModalWindow() {
       >
         <h2 className="title-modal">Buy a LTK!</h2>
         <button className="close-btn" onClick={closeModal}>
-          close
+          <RxCross2 />
         </button>
 
         <p className="text-modal">
@@ -141,16 +142,24 @@ export function ModalWindow() {
                 required: "Address field is obvious!",
               })}
             />
-            <p>{errors.toWalletAddress?.message}</p>
+            {errors.toWalletAddress?.message ? (
+              <p>{errors.toWalletAddress?.message}</p>
+            ) : (
+              <></>
+            )}
           </div>
           <div className="amount-token">
-            <p>Amount</p>
+            <p>Amount: </p>
             <input
               {...register("value", { required: "Value field is obvious!" })}
             />
-            <p>{errors.toWalletAddress?.message}</p>
-            <input type="submit" className="btn-buy" />
-          </div>{" "}
+            {errors.toWalletAddress?.message ? (
+              <p>{errors.toWalletAddress?.message}</p>
+            ) : (
+              <></>
+            )}
+          </div>
+          <input type="submit" className="btn btn-buy" />
         </form>
       </Modal>
     </div>

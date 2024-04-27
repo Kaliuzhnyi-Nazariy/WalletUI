@@ -15,7 +15,7 @@ export function InfoBlock() {
             Explore the exciting world of educational currencies with us.
           </span>
         </section>
-        <section>
+        <section className="main-info">
           <h2 style={{ textTransform: "uppercase" }} className="second-title">
             about learn token
           </h2>
