@@ -10,7 +10,7 @@
 }
 
 %main-title {
-  font-size: 72px;
+  font-size: 54px;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -24,10 +24,11 @@
 }
 
 %second-title {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0em;
+  text-align: center;
 }
 
 %main-text {
@@ -35,6 +36,7 @@
   font-weight: 500; // normal
   line-height: 1.2;
   letter-spacing: normal;
+  text-align: center;
 }
 
 %open-model {

@@ -1,0 +1,14 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as f;
+@use "../utils/mixins" as mx;
+
+footer {
+  background-color: f.get-color("white");
+}
+
+.footer-text {
+  @extend %main-text;
+
+  color: f.get-color("black");
+  font-size: 12px;
+}

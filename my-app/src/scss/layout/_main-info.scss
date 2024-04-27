@@ -1,5 +1,39 @@
+@use "../utils/placeholders";
 @use "../utils/functions" as f;
+@use "../utils/mixins" as mx;
+
+.main-title {
+  @extend %main-title;
+  font-size: 32px;
+
+  color: f.get-color("black");
+
+  @include mx.mq(tab) {
+    font-size: 54px;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
 .main-info {
   background-color: f.get-color("secondary");
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.second-title {
+  text-transform: uppercase;
+
+  @extend %second-title;
+}
+
+.main-text {
+  @extend %main-text;
+  text-align: center;
 }
