@@ -1,0 +1,24 @@
+@if index($btn-type, open-modal) {
+  .open-modal {
+    transition: all 0.2s;
+
+    &:active {
+      background-color: darken(f.get-color("primary"), 5%);
+      transform: scale(1.1), 250ms;
+    }
+
+    // &:hover,
+    // &:focus {
+    //   //   filter: brightness(50%);
+    //   background-color: darken(f.get-color("primary"), 2%);
+    // }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(f.get-color("primary"), 5%);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

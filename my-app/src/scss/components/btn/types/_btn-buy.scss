@@ -1,0 +1,28 @@
+@use "../../../utils/functions" as f;
+
+.btn-buy {
+  background-color: f.get-color("black");
+  color: f.get-color("white");
+  transition: transform 0.2s;
+  //   border-radius: 1px transparent;
+  border-radius: 0px;
+
+  width: 160px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+
+  justify-self: center;
+
+  &:active {
+    transform: scale(1.1);
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,27 +1,46 @@
-@use "../utils/functions" as v;
+@use "../utils/functions" as f;
+@use "../utils/variables" as v;
+@use "../utils/mixins" as mx;
+
+// $paddings: v.$paddings;
 
 .modal {
-  width: 560px;
-  height: 400px;
+  // width: 560px;
+  // height: 400px;
+
+  width: 85%;
+  height: 600px;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: v.get-color("white");
-  color: v.get-color("black");
+  background-color: f.get-color("white");
+  color: f.get-color("black");
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(6, 1fr);
+  gap: 24px 8px;
+  padding: 24px;
 
   grid-template-areas:
-    ". t c"
+    "t t c"
     "i i i"
     "l l l"
     "f f f"
     "f f f"
     "f f f";
+
+  @include mx.mq(tab) {
+    grid-template-areas:
+      ". t c"
+      "i i i"
+      "l l l"
+      "f f f"
+      "f f f"
+      "f f f";
+  }
 }
 
 .title-modal {
@@ -41,7 +60,7 @@
   grid-area: l;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "tl . ta";
+  grid-template-areas: "tl tl ta";
 }
 
 .amount-of-tokens-left-text {
@@ -56,11 +75,12 @@
   display: grid;
   grid-area: f;
 
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
     "w w w"
-    "a a a";
+    "a a a"
+    ". s .";
 }
 
 .wallet-inf {

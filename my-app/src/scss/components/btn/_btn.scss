@@ -1,0 +1,20 @@
+@use "../../utils/functions" as f;
+
+$btn-padding-x: 12px !default;
+$btn-padding-y: 8px !default;
+$btn-min-width: 32px !default;
+$btn-min-height: 32px !default;
+$btn-border-radius: 16px !default;
+
+$btn-text-size: 16px !default;
+$btn-text-weight: 400 !default;
+$btn-line-height: 20px !default;
+$btn-text-spacing: 0.5px !default;
+$btn-text-color: f.get-color("black") !default;
+$btn-text-bgcolor: f.get-color("primary") !default;
+
+$btn-type: (open-modal, for-sale);
+
+@import "btn-base";
+@import "types/open-modal";
+@import "types/btn-buy";

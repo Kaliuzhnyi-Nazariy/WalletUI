@@ -1,0 +1,5 @@
+@use "../utils/functions" as f;
+
+.main-info {
+  background-color: f.get-color("secondary");
+}
