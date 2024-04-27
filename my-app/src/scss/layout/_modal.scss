@@ -45,10 +45,17 @@
 
 .title-modal {
   grid-area: t;
+  align-self: center;
+
+  @include mx.mq(tab) {
+    justify-self: center;
+  }
 }
 
-.close-btn {
+.close-btn-area {
   display: grid;
+  justify-self: right;
+  align-self: center;
   grid-area: c;
 }
 

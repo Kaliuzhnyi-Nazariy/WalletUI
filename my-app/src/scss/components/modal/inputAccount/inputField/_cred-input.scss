@@ -1,0 +1,5 @@
+@use "../../../../utils/placeholders";
+
+.cred-input {
+  @extend %cred-inp;
+}

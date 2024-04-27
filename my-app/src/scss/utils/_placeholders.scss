@@ -57,3 +57,16 @@
   line-height: 1.2;
   letter-spacing: normal;
 }
+
+%cred-inf {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+%cred-inp {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 40px;
+}
