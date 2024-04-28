@@ -2,12 +2,16 @@
 @use "../utils/functions" as fn;
 @use "../utils/mixins" as mx;
 
+.head {
+  background-color: fn.get-color("primary");
+}
+
 .logo-text {
   @extend %logo-title;
   color: fn.get-color("black");
   text-align: center;
 
   @include mx.mq(pc) {
-    text-align: none;
+    text-align: unset;
   }
 }
