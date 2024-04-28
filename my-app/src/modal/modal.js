@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import { RxCross2 } from "react-icons/rx";
 import Modal from "react-modal";
 import Contract_ABI from "../Contracts/Contract_ABI.json";
 import Web3 from "web3";
 import { useForm, SubmitHandler } from "react-hook-form";
+
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
+
+import toastr from "toastr";
+
 const BigNumber = require("bignumber.js");
 const EthereumAddress = require("ethereum-address");
 
 // const {
+
 //   isValidEthereumAddress,
 // } = require("@getdelta/wallet-address-validator");
 
@@ -161,11 +173,7 @@ export function ModalWindow() {
               {...register("value", { required: "Value field is obvious!" })}
               className="cred-input"
             />
-            {errors.toWalletAddress?.message ? (
-              <p>{errors.toWalletAddress?.message}</p>
-            ) : (
-              <></>
-            )}
+            {errors.value?.message ? <p>{errors.value?.message}</p> : <></>}
           </div>
           <input type="submit" className="btn btn-buy" />
         </form>

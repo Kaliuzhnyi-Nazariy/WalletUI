@@ -1,0 +1,36 @@
+@use "../../utils/mixins" as mx;
+
+.text-under-photo {
+  position: relative;
+}
+
+.text-on-photo {
+  position: absolute;
+  z-index: 0;
+  left: 4%;
+  bottom: 4%;
+
+  display: flex;
+  justify-content: start;
+
+  font-size: 8px;
+
+  width: 150px;
+
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+  padding: 12px;
+
+  @media (min-width: 425px) {
+    font-size: 11px;
+    padding: 16px;
+
+    width: 220px;
+  }
+
+  @include mx.mq(tab) {
+    font-size: 20px;
+    padding: 18px;
+
+    width: 350px;
+  }
+}
